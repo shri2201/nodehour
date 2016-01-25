@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://js.pusher.com/2.2/pusher.min.js"></script>
+  <script>
+    var pusher = new Pusher('6192ee2882ff600b0489', {
+      encrypted: true
+    });
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+      document.getElementById("p1").innerHTML = data.message;
+    });
+  </script>
+  </head>
+  <div class="container">
+  <div class="jumbotron">
+    <h3 id="p1">Go and see the fun here by Anurag!!!</h3>      
+  
+  </div>
+
+</body>
+
+</head>

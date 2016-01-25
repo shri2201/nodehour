@@ -1,0 +1,8 @@
+{
+  "name": "Pusher",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node http2.js"
+  }
+}
