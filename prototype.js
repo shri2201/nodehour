@@ -1,13 +1,17 @@
 // A javascript class as good as it can get
+// Understanding prototype in javascript
+
 function Employee() {
 	var name;
 	var monthlySalary;
 	var age;
+  // Define a method in the class
 	this.isAdult = function() {
          return val = (this.age > 18) ? "yes" : "no";
 	};
 }
 
+// Add more methods using prototype
 Employee.prototype.annualSalary = function() {
 	return this.monthlySalary*12;
 };
