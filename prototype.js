@@ -1,10 +1,10 @@
 // A javascript class as good as it can get
 function Employee() {
-	var name; 
+	var name;
 	var monthlySalary;
 	var age;
 	this.isAdult = function() {
-         return val = (this.age > 18) ? "yes" : "no";        
+         return val = (this.age > 18) ? "yes" : "no";
 	};
 }
 
@@ -14,7 +14,7 @@ Employee.prototype.annualSalary = function() {
 
 Employee.prototype.gender = function(gender){
 	return this.gender = gender;
-}
+};
 
 var person = new Employee();
 person.name = "John Doe";
@@ -24,12 +24,12 @@ person.age = 45;
 
 // Log the object and show it in JSON
 console.log(person);
-// Added a new compute method in the class using prototype
+// Added a new compute method in the object using prototype
 console.log(person.annualSalary());
-// Added a new method in the class
+// Added a new method in the object
 console.log(person.isAdult());
-// Added a new property using prototype
+// Added a new property using object
 person.gender('F');
-console.log(person.gender)
+console.log(person.gender);
 // Show that the new property is in JSON now
 console.log(JSON.stringify(person));
