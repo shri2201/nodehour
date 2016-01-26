@@ -6,7 +6,7 @@ prompt.get(['age', 'city'], function(err, result) {
   console.log('Your age, city is ' + result.age + ", " + result.city);
 });
 
-//
+// Prompt allows advanced pattern matching to validate inputs
 //var schema = {
 //   properties: {
 //     name: {
