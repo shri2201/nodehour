@@ -1,4 +1,3 @@
-"use strict";
 var http = require('http');
 var Pusher = require('pusher');
 

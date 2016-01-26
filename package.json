@@ -1,3 +1,4 @@
+// This only for Heroku. Not being used for these samples
 {
   "name": "Pusher",
   "version": "0.0.1",

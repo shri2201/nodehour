@@ -5,7 +5,7 @@ var x = function foo(num) {
   console.log("Entered and leaving foo() " + quux);
 
   return zip = function() {
-    //var quux;
+    // We can access the variables of the parent function
     bar = true;
     console.log("In zip: " + quux++)
   }

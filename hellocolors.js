@@ -1,4 +1,5 @@
-//Install colors  npm install colors
+// To install colors:
+// npm install colors
 
 var colors = require('colors');
 
@@ -8,7 +9,7 @@ console.log(helloworld);
 console.log(helloworld.green);
 console.log(helloworld.red);
 
-// set theme 
+// set theme
 colors.setTheme({
   silly: 'rainbow',
   input: 'grey',
