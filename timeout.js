@@ -1,7 +1,7 @@
 setInterval(function() {
   console.log('in Amsterdam.');
   while (true) {
-    
+    // Event loop stalls here
   }
 }, 5000);
 

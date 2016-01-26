@@ -1,10 +1,12 @@
 function timeOut()
-{   
+{
     var x=500;
     setTimeout(function(){
         console.log('done x=' +x );
     }, 5000);
+
     console.log('leaving after setting the time x=' +x);
+
     try
     {
         var k = 90/0;
