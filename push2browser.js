@@ -3,7 +3,7 @@ var Pusher = require('pusher');
 
 var quoteReader = function() {
 
-  var getURL = "http://api.openweathermap.org/data/2.5/weather?q=Breda,nl&appid=d16fa4b8b21f6c1d2ac64f0b2887a4d8";
+  var getURL = "http://api.openweathermap.org/data/2.5/weather?q=Breda,nl&appid=d16fa4b8b21f6c1d2ac64f0b2887a4d";
   http.get(getURL, function(res) {
     res.setEncoding('utf8');
     res.on('data', function(txt) {
