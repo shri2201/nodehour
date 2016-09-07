@@ -6,7 +6,7 @@ var colors = require('colors');
 var helloworld = 'hello, World';
 
 console.log(helloworld);
-console.log(helloworld.green);
+console.log(helloworld.blue);
 console.log(helloworld.red);
 
 // set theme
@@ -23,5 +23,5 @@ colors.setTheme({
   error: 'red'
 });
 
-// outputs rainbow text 
+// outputs rainbow text
 console.log(colors.silly("this is a warning"));

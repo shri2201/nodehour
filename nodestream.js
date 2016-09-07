@@ -12,7 +12,7 @@ readableStream.on('data', function(chunk) {
   console.log('** Nothing further to read');
 });
 
-//
+// You can also write the on.end in a separate funtion
 // readableStream.on('end', function() {
 // 	console.log('Nothing further to read');
 // })

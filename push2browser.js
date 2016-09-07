@@ -3,7 +3,7 @@ var Pusher = require('pusher');
 
 var quoteReader = function() {
 
-  var getURL = "http://finance.yahoo.com/webservice/v1/symbols/GOOG/quote?format=json";
+  var getURL = "http://api.openweathermap.org/data/2.5/weather?q=Breda,nl&appid=d16fa4b8b21f6c1d2ac64f0b2887a4d8";
   http.get(getURL, function(res) {
     res.setEncoding('utf8');
     res.on('data', function(txt) {
@@ -16,10 +16,12 @@ var quoteReader = function() {
 
       pusher.port = 443;
       var obj = JSON.parse(txt);
-      var quote = obj.list.resources[0].resource.fields;
 
+      //console.log(obj);
+
+      var txtStr = 'Current Temp in Breda is ' + (obj.main.temp - 273.15).toPrecision(3) + " deg C & " + obj.weather[0].description;
       // Form the string to be sent to browser
-      var txtStr = quote.name + " Price " + parseFloat(quote.price) + " USD " + "Volume " + quote.volume;
+
       console.log(txtStr);
 
       // Dispatch the message

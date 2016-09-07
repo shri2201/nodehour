@@ -15,5 +15,5 @@ ee1.on('light', function() {
     console.log("Light..");
 });
 
-setInterval(function(){ ee1.emit('radiation', 1)}, 5000);
+setInterval(function(){ ee1.emit('', 1,)}, 5000);
 setInterval(function(){ ee1.emit('light')}, 1000);
