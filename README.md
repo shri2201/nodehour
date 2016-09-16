@@ -12,6 +12,7 @@ Call me for more details.
 
 - 14-08-2015  ING, Amsterdam
 - 27-01-2016  SOGETI, Amersfoort
+- 08-09-2016  Codecentric, Breda
 
 
 
