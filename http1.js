@@ -1,6 +1,6 @@
 var http = require('http');
 
-var requestListener = function(req, res) {
+var requestListener = (req, res) => {
   res.writeHead(200);
   res.end('Hello, World!\n');
 }
