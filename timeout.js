@@ -1,6 +1,6 @@
 setInterval(function foo() {
   console.log('in Amsterdam.');
-  //while(true){};
+  while(true){};
 }, 5000);
 
 setInterval(function bar() {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div ng-app="myApp" ng-controller="formCtrl">
+                <input type="text" ng-model="newISBN">
+                <input type="submit" ng-click="add()" value="Click to find ISBN and Title">
+                <p>
+                    {{isbn}} {{title}}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formCtrl', function($scope, $http) {
+        $scope.add = function() {
+            $http.get("http://localhost:8080/books/" + $scope.newISBN).then(function(response) {
+                $scope.isbn = response.data.isbn;
+                $scope.title = response.data.title;
+                $scope.newMessage = response.data.ip;
+                $scope.messages.push($scope.newMessage);
+            });
+        };
+    });
+</script>
+
+</html>

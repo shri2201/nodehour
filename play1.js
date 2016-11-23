@@ -1,14 +1,14 @@
-// Let's play with the closures
+// Let's play with the closures in the function expression
 
 var f = function foo() {
-  var inx = 0;
-  console.log("Doing foo()");
-  // This will cause debugger to break here
-  // debugger;
-  return b = function () {
-    console.log("Doing bar()");
-    return inx++;
-  };
+    var inx = 0;
+    console.log("Doing foo()");
+    // This will cause debugger to break here
+    // debugger;
+    return b = function() {
+        console.log("Doing bar()");
+        return inx++;
+    };
 };
 
 
